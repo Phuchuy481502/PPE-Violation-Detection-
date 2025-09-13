@@ -12,22 +12,22 @@
 
 ## A glimpse of the project
 <div align="center">
-  <img src="assets/1.png" alt="Project Image" width="600"/>
+  <img src="1.png" alt="Project Image" width="600"/>
   <p><em>Figure 1: Overview of how Violation Detection works on image</em></p>
 </div>
 
 <div align="center">
-  <img src="assets/2.png" alt="Project Image" width="600"/>
+  <img src="2.png" alt="Project Image" width="600"/>
   <p><em>Figure 2: Overview of how Violation Detection works on video</em></p>
 </div>
 
 <div align="center">
-  <img src="assets/3.png" alt="Project Image" width="600"/>
+  <img src="3.png" alt="Project Image" width="600"/>
   <p><em>Figure 3: Project pipeline</em></p>
 </div>
 
 <div align="center">
-  <img src="assets/4.png" alt="Project Image" width="600"/>
+  <img src="4.png" alt="Project Image" width="600"/>
   <p><em>Figure 4: Web demo</em></p>
 </div>
 
