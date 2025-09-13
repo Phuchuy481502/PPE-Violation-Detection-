@@ -1,0 +1,17 @@
+torch 
+torchvision 
+torchaudio
+torchmetrics
+pyyaml
+tqdm
+Pillow
+opencv-python-headless
+pycocotools
+cython_bbox
+lap
+ultralytics
+streamlit
+numpy
+rtmlib -i https://pypi.org/simple
+onnxruntime-gpu
+openvino

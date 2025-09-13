@@ -1,0 +1,59 @@
+# program: train_yolo_wandb.py
+name: model_sweep_updated_para
+method: grid
+metric:
+  name: metrics/mAP50(B)
+  goal: maximize
+parameters:
+  # model (sweep)
+  model:
+    values: ["yolo11n.pt", "yolov10n.pt"]
+  dataset:
+    value: "../data/data-ppe_v4.yaml"
+  # freeze:
+  #   values: [False]
+  # pretrained:
+  #   values: [True]
+
+  # augmentation (fixed)
+  # resize:
+  #   values: [224]
+  # horizontal_flip:
+  #   values: [0.5]
+  # vertical_flip:
+  #   values: [0.5]
+  # random_rotation:
+  #   values: [90]
+  # random_affine:
+  #   values: [0.2]
+  # random_perspective:
+  #   values: [0.2]
+  # auto_aug:
+  #   values: [1] 
+
+  # hyperparameters (fixed)
+  classes:
+    value: 4
+  lr:
+    value: 1e-5
+  imgsz:
+    value: 640
+  epochs:
+    value: 150
+  batch_size:
+    value: 4
+  optimizer:
+    value: "adamw"
+  scheduler: 
+    value: "cosine"
+  es_patience: 
+    value: 10
+  weight_decay:
+    value: 0.00025
+  momentum:
+    value: 0.9
+    
+# command:
+#   - ${env}
+#   - python
+#   - ${program}

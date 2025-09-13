@@ -1,0 +1,68 @@
+program: train.py
+name: aug_sweep
+method: random
+metric:
+  name: val_loss
+  goal: minimize
+parameters:
+  model:
+    value: "vit"
+  dataset:
+    value: "hutech-dataset:latest"
+  # augmentation (sweep)
+  resize:
+    values: [224]
+  random_crop:
+    values: [224]
+  horizontal_flip:
+    values: [0.5]
+  vertical_flip:
+    values: [0.5]
+  random_rotation:
+    values: [90, 180]
+  brightness:
+    values: [0.2, 0.5]
+  contrast:
+    values: [0.2, 0.5]
+  saturation:
+    values: [0.2, 0.5]
+  hue:
+    values: [0.2, 0.5]
+  random_affine:
+    values: [0, 0.2]
+  random_perspective:
+    values: [0, 0.2]
+  gray:
+    values: [0, 0.2]
+  blur:
+    values: [0, 1]
+  auto_aug:
+    values: [0, 1]
+  random_erasing:
+    values: [0.2, 0.5]
+  normalize: 
+    values: [0, 1]  
+  # hyperparameters (fixed)
+  num_classes:
+    value: 4
+  lr:
+    value: 1e-5
+  num_epochs:
+    value: 150
+  batch_size:
+    value: 4
+  optimizer:
+    value: "adamw"
+  scheduler: 
+    value: "cosine"
+  es_patience: 
+    value: 10
+  weight_decay:
+    value: 0.00025
+  momentum:
+    value: 0.9
+    
+command:
+  - ${env}
+  - python
+  - ${program}
